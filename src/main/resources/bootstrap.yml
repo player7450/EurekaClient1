@@ -1,0 +1,17 @@
+---
+
+server:
+  port: 9001
+  context-path: /eurekaClient1
+  
+spring:
+  application:
+    name: EurekaClient1
+    
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9000/eurekaServer/
+  instance:
+    instance-id: ${spring.application.name} 
